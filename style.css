@@ -1,0 +1,95 @@
+:root {
+  --bg: #0b0f1a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(1200px 800px at 60% -10%, #0f172a, #0b0f1a);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  background: color-mix(in srgb, var(--panel) 92%, black 8%);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.hud {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat { 
+  display: grid; 
+  gap: 4px; 
+  text-align: center; 
+  min-width: 90px;
+  padding: 8px 10px; 
+  background: rgba(255,255,255,.04);
+  border-radius: 8px;
+}
+.stat span { color: var(--muted); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.stat strong { font-size: 24px; color: var(--text); }
+
+.panel figcaption {
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.play { display: flex; gap: 16px; align-items: flex-start; }
+
+canvas#tetris {
+  display: block;
+  background: #0b1020;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.panels { display: grid; gap: 12px; align-content: start; }
+
+.panel {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  background: rgba(255,255,255,.04);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.panel figcaption {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+canvas#hold, canvas#next {
+  display: block;
+  background: #0b1020;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.help { color: var(--muted); font-size: 12px; text-align: center; }
+.help p { margin: 4px 0 0; }

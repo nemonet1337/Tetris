@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="hud">
+            <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+            <div class="stat"><span>Level</span><strong id="level">1</strong></div>
+            <div class="stat"><span>Lines</span><strong id="lines">0</strong></div>
+        </section>
+
+        <div class="play">
+            <canvas id="tetris" width="360" height="720" aria-label="Tetris board" role="img"></canvas>
+            <section class="panels">
+                <figure class="panel">
+                    <figcaption>Hold</figcaption>
+                    <canvas id="hold" width="140" height="140" aria-label="Hold piece"></canvas>
+                </figure>
+                <figure class="panel">
+                    <figcaption>Next</figcaption>
+                    <canvas id="next" width="140" height="240" aria-label="Next pieces"></canvas>
+                </figure>
+            </section>
+        </div>
+
+        <section class="help">
+            <p>操作: ← → 移動 / ↑ 回転 / ↓ ソフトドロップ / Space ハードドロップ / Shift or C ホールド / P ポーズ / R リセット</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
